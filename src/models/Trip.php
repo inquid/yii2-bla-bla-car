@@ -13,6 +13,9 @@ use yii\base\Model;
 
 class Trip extends Model
 {
+    /**
+     * @var Links $links
+     */
     public $links; //
     public $departure_date; //String
     public $departure_place; //DeparturePlace

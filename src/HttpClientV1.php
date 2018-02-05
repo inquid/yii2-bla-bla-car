@@ -72,29 +72,23 @@ class HttpClientV1 extends Component
      */
     protected function modelResponse($response, $className, $isList = false)
     {
-        Yii::info(json_encode($response));
         if ($response && ($headers = $response->getHeaders())) {
             if ($headers->get('http-code') == 200 || $headers->get('http-code') == 201) {
                 $content = Json::decode($response->getContent());
-                $response = isset($content['response']) ? $content['response'] : $content['status'];
-                if ($response == 'success') {
-                    $data = isset($content['Data']) ? $content['Data'] : $content['data'];
-                    if ($isList) {
-                        $list = [];
-                        foreach ($data as $row) {
-                            $row['class'] = $className;
-                            $list[] = Yii::createObject($row);
-                        }
-                        return $list;
-                    } else {
-                        if ($className == null) {
-                            return $data;
-                        }
-                        $data['class'] = $className;
-                        return Yii::createObject($data);
+                Yii::trace(json_encode($content));
+                if ($isList && $className == "Trips") {
+                    $list = [];
+                    foreach ($content as $row) {
+                        $row['class'] = $className;
+                        $list[] = Yii::createObject($row);
                     }
-                } elseif ($response == 'error') {
-                    return new Error($headers->get('http-code'), $content['message']);
+                    return $list;
+                } else {
+                    if ($className == null) {
+                        return $content;
+                    }
+                    $content['class'] = $className;
+                    return Yii::createObject($content);
                 }
             } else {
                 return new Error($headers->get('http-code'));

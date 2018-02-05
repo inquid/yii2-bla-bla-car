@@ -8,10 +8,17 @@
 
 namespace inquid\blablacar\models;
 
+use yii\base\Model;
 
 class Trips extends Model
 {
+    /**
+     * @var Links $links
+     */
     public $links; //Links
+    /**
+     * @var Pager $pager
+     */
     public $pager; //Pager
     public $trips = []; //array(Trip)
     public $top_trips = []; //array(object)

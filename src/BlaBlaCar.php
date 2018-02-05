@@ -21,10 +21,10 @@ class BlaBlaCar extends HttpClientV1
     public function getTrips($params)
     {
         try {
-            return $this->modelResponse($this->sendRequest('get', "trips")->setData([
+            return $this->modelResponse($this->sendRequest('get', "trips", [
                 'fn' => 'Paris',
                 'tn' => 'London'
-            ]), Trips::className());
+            ]), Trips::className(), true);
         } catch (\Exception $exception) {
             return new Error(500, $exception->getMessage());
         }
