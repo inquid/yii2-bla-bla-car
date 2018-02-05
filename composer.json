@@ -1,0 +1,30 @@
+{
+    "name": "inquid/yii2-bla-bla-car",
+    "description": "Bla bla car Api client for yii2 :)",
+    "type": "yii2-extension",
+    "keywords": [
+        "yii2",
+        "facturacion"
+    ],
+    "homepage": "https://github.com/inquid/yii2-bla-bla-car",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Inquid INC",
+            "email": "luisarmando1234@gmail.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/inquid/yii2-bla-bla-car/issues",
+        "source": "https://github.com/inquid/yii2-bla-bla-car"
+    },
+    "minimum-stability": "dev",
+    "require": {
+	 "yiisoft/yii2-httpclient": "~2.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "inquid\\facturacom\\": "src"
+        }
+    }
+}
