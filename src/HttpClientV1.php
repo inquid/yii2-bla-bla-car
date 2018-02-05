@@ -32,7 +32,6 @@ class HttpClientV1 extends Component
         CURLOPT_HEADER => false,
     ];
     public $apiKey;
-    public $secretKey;
 
     public function init()
     {
@@ -40,9 +39,9 @@ class HttpClientV1 extends Component
             $key = Configuration::find()->where(['system_type' => 'blablacar', 'param' => 'api_key'])->select('system_value')->one();
             if (isset($key)) {
                 $this->apiKey = $key->system_value;
+            } else {
+                throw new UserException("API KEY IS REQUIRED");
             }
-        } else {
-            throw new UserException("API KEY IS REQUIRED");
         }
     }
 
