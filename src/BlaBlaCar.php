@@ -9,11 +9,14 @@
 namespace inquid\blablacar;
 
 
+use inquid\blablacar\models\Error;
+use inquid\blablacar\models\Trips;
+
 class BlaBlaCar extends HttpClientV1
 {
     /**
      * @param array $params
-     * @return array|Cliente|Error
+     * @return array|Trips|Error
      */
     public function getTrips($params)
     {

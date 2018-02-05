@@ -24,7 +24,7 @@
     },
     "autoload": {
         "psr-4": {
-            "inquid\\facturacom\\": "src"
+            "inquid\\blablacar\\": "src"
         }
     }
 }
