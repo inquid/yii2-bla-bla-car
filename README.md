@@ -8,6 +8,7 @@
 
 yii2-bla-bla-car
 =====================
+UNDER DEVELOPMENT! NOT READY FOR PRODUCTION!
 
 Librería para usar el API de https://dev.blablacar.com/
 
