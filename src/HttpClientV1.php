@@ -76,7 +76,7 @@ class HttpClientV1 extends Component
             if ($headers->get('http-code') == 200 || $headers->get('http-code') == 201) {
                 $content = Json::decode($response->getContent());
                 Yii::trace(json_encode($content));
-                if ($isList && $className == "Trips") {
+                if ($isList && $className == "inquid\blablacar\models\Trips") {
                     $list = [];
                     foreach ($content as $row) {
                         $row['class'] = $className;
