@@ -54,7 +54,7 @@ $response = Yii::$app->blablacar->getTrips([
 print_r($response);
 ```
 Iniciativa Programa México: 
-![Iniciativa Programa México](https://lh5.googleusercontent.com/k6u-DepqdgZzTk15Kxx6UPuZJ0ldiv6EPuhhJYRp8QfB89kLxU-D1D7YdYST-gGXnSxl9LFixzn5sYg=w1920-h990)
+![Iniciativa Programa México](https://storage.googleapis.com/inquid-backuper/logos/iniciativa-mexico.png)
 
 SUPPORT
 -----
